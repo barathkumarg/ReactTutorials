@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import LearningComponent from './components/LearningComponent';
+
+import Counter from './components/counter/Counter';
 
 //Functional component
 
@@ -8,7 +9,7 @@ import LearningComponent from './components/LearningComponent';
    
     return (
       <div className="App">  
-        <LearningComponent/>
+        <Counter/>
         
       </div>
       
