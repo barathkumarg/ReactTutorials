@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import {PropTypes} from 'prop-types'
+
 import './Counter.css'
+import CounterButton from './CounterButton';
 
 export default function Counter(){
  
@@ -17,6 +18,11 @@ export default function Counter(){
       setcount(count - increment)
       }
 
+    //Parent reset function
+    function ParentResetFunction(){
+      setcount(0)
+    }
+
 
   return (
          <div className="Counter">
@@ -24,43 +30,12 @@ export default function Counter(){
               <CounterButton increment={1} incrementMethod={ParentincrementCounterFunction} decrementMethod={ParentdecrementCounterFunction}/>
               <CounterButton increment={2} incrementMethod={ParentincrementCounterFunction} decrementMethod={ParentdecrementCounterFunction}/>
               <CounterButton increment={5} incrementMethod={ParentincrementCounterFunction} decrementMethod={ParentdecrementCounterFunction}/>
+
+              <div className='resetButtonDiv'>
+                     <button className='resetButton' onClick={ParentResetFunction}>Reset</button>
+              </div>
          </div>
   )
 
 }
 
-function CounterButton({increment,incrementMethod,decrementMethod}){
-   
-        //child increment function
-        function incrementCounterFunction(){
-          incrementMethod({increment})
-      }
-      
-      //child decrement function
-      function decrementCounterFunction(){
-        decrementMethod({increment})
-        }
-
-    return (
-
-      <div className="CounterDiv">
-
-        <div>
-            <button className="counterButton" onClick={incrementCounterFunction}>+{increment}</button>
-            <button className="counterButton" onClick={decrementCounterFunction}>-{increment}</button>
-        </div>
-      </div>
-
-    );
-
-}
-
-CounterButton.propTypes = {
-
-  increment: PropTypes.number
-}
-
-CounterButton.propTypes = {
-
-  increment: 1
-}
