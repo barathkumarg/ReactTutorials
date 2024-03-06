@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import Counter from './components/counter/Counter';
+
+import ToDoComponent from './components/To-Do/LoginComponent';
 
 //Functional component
 
@@ -9,7 +10,8 @@ import Counter from './components/counter/Counter';
    
     return (
       <div className="App">  
-        <Counter/>
+        {/* <Counter/> */}
+        <ToDoComponent/>
         
       </div>
       
