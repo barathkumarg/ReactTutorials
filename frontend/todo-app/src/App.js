@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-
-import ToDoComponent from './components/To-Do/LoginComponent';
+// import Counter from './components/counter/Counter';
+import ToDoComponent from './components/To-Do/ToDoComponent';
 
 //Functional component
 
